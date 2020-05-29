@@ -1,7 +1,7 @@
 # wechat-html
 
 > a mobile website for vipx
-
+正式环境连接：https://m.vipx.com/login
 ## Build Setup
 
 ``` bash
