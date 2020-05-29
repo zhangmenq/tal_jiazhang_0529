@@ -1,0 +1,341 @@
+.login-reg{
+  // .wh(100%, 100%);
+  width: 100%;
+  min-height: 100%;
+  font-family: "Microsoft YaHei";
+  .bg-m("@{img-path}/login-reg-img1.png",0,0,no-repeat);
+  background-position: 0 bottom;
+  background-size: 100%;
+  .loginreg-cont{
+    width: 80%;
+    margin:0 auto;
+    h2{
+      text-align: center;
+      color: @col-purple;
+      font-size: .36rem;
+      margin:.48rem 0 0 0;
+    }
+    .hint{
+      display: block;
+      text-align: center;
+      font-size: .24rem;
+      color: @col-gray;
+      margin:.2rem 0 0 0;
+    }
+    &.login{
+      padding-top:1rem;
+    }
+    .vux-tab{
+      height: .85rem;
+      margin: 0 0 .6rem 0;
+      .vux-tab-item{
+        font-size: .36rem;
+        background:none;
+        color: @col-darkgray;
+      }
+      .vux-tab-selected{
+        color: @col-purple;
+        border-radius: 5px !important;
+      }
+      .vux-tab-bar-inner{
+        border-radius: 10px;
+      }
+    }
+    .inputicon{
+      display: inline-block;
+      margin:-.08rem .2rem 0 -.08rem;
+      .wh(.3rem,.3rem);
+      vertical-align: middle;
+      .bg-m('@{img-path}/login-icon.png');
+      background-size: 100% .9rem;
+      &.phone{
+        background-position: 0 0;
+      }
+      &.ver-code{
+        background-position: 0 -.6rem;
+      }
+      &.password{
+        background-position: 0 -.3rem;
+      }
+    }
+    .weui-vcode{
+      position: relative;
+      .weui-cells{
+        width: 60%;
+      }
+      .send-code{
+        position: absolute;
+        right: 0;
+        top:0;
+        width:35%;
+        padding:.11rem 0;
+        font-size: .28rem;
+        border-radius:.4rem;
+        background: @col-disable;
+        color: @col-gray;
+        .box-shadow(0 .07rem .16rem rgba(137,0,139,.3));
+        &:before{
+        border:none;
+        }
+        &:after{
+          border:none;
+        }
+         &.code-active{
+           .btn-purple-shadow;
+         }
+      }
+    }
+
+    .weui-cells{
+      border-radius: .42rem;
+      // height: .85rem;
+      // line-height: .6rem;
+      box-shadow: 0 .07rem .16rem 0rem rgba(137,0,139,.3);
+      margin: .35rem 0 0 0;
+      padding:.11rem .2rem;
+      & .weui-label{
+        font-size: .3rem;
+        color: @col-darkgray;
+      }
+      & .weui-input{
+          font-size: .3rem;
+          color: @col-darkgray;
+          &::-webkit-input-placeholder{
+            color: @col-gray;
+          }
+          width: 95%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      }
+      & .weui-select{
+        font-size: .3rem;
+        color: @col-darkgray;
+        height: .66rem;
+        line-height: .66rem;
+        &::-webkit-select-placeholder{
+          color: @col-gray;
+        }
+        option{
+          line-height: .12rem;
+          font-size: .15rem;
+          border-radius: 10px;
+          color: @col-purple;
+        }
+      }
+      & .vux-cell-value{
+        font-size: .3rem;
+        color: @col-darkgray;
+      }
+      & .vux-cell-placeholder{
+        font-size: .3rem;
+        color: @col-gray;
+      }
+      .weui-cell__bd:after, .weui-cell__ft:after{
+        .wh(.2rem,.2rem);
+        border-width: 0 .03rem .03rem 0;
+        margin-top: -.16rem;
+        border-color:@col-purple;
+      }
+      .weui-icon-clear:before, .vux-input-icon.weui-icon-warn:before, .vux-input-icon.weui-icon-success:before{
+        font-size: .23rem;
+        margin:0 0 0 .02rem;
+      }
+      &:before{
+          border:none;
+      }
+      &:after{
+          border:none;
+        }
+    }
+    .grades{
+      display: flex;
+      flex-wrap: wrap;
+      .grades-item{
+        .wh(28%, .72rem);
+        margin: .1rem 2.5%;
+        line-height: .72rem;
+        border-radius: .1rem;
+        border: .01rem solid @col-gray;
+        font-size: .3rem;
+        text-align: center;
+        vertical-align: middle;
+        color: @col-darkgray;
+        background-color: @col-white;
+        &.active{
+          color: @col-white;
+          background-color: @col-purple;
+          border: none;
+        }
+      }
+    }
+    .execute-button{
+      padding:.7rem 0 0 0;
+      .wrong{
+        text-align: center;
+        color:@col-wrong;
+        font-size: .24rem;
+        padding:0 0 .15rem 0;
+      }
+      .com-button{
+        border-radius: 99px;
+        font-size: .36rem;
+        background: @col-disable;
+        color: @col-gray;
+        .box-shadow(0 .07rem .3rem 0rem rgba(137,0,139,.3));
+        &.combutton-active{
+          // box-shadow: 0 .05rem .2rem #5593f2;
+          // // background:-webkit-gradient(linear, 0 0, 0 left, from(#ff0000), to(rgba(0, 0, 255, .5)));
+          // background: linear-gradient(to right,#4d70f5 , #66b8f9);
+          // color: @col-white;
+          .btn-purple-shadow;
+        }
+      }
+      .weui-btn:after{
+        border: none;
+      }
+    }
+
+    .reg-now{
+      display: flex;
+      padding:.4rem .25rem;
+      justify-content:space-between;
+      a{
+        font-size: .3rem;
+        color: @col-gray;
+        &.clicklogin{
+          text-align: center;
+          color:@col-purple;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+    .statement{
+      text-align: center;
+      font-size: .26rem;
+      color: @col-gray;
+      margin: .2rem 0 0 0;
+      a{
+        color:@col-purple;
+      }
+    }
+    //温馨提示
+    .warm-prompt{
+      color: @col-gray;
+      font-size: .3rem;
+      line-height: .5rem;
+      h3{
+        font-size: .3rem;
+        color: @col-darkgray;
+        padding:.5rem 0 0 0;
+      }
+    }
+    .bottom-img{
+      position:absolute;
+      width: 100%;
+      bottom:0;
+      left: 0;
+      img{
+        .wh-img();
+      }
+    }
+    .down-arrow{
+      &::after{
+        position: absolute;
+        top: .16rem;
+        right: 0.15rem;
+        display: block;
+        content: "";
+        .wh(.2rem,.2rem);
+        border-width: 0 .03rem .03rem 0;
+        border-style: solid;
+        border-color: @col-light-purple;
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+      }
+    }
+    .characteristics{
+      position: relative;
+      font-size: .3rem;
+      padding: .1rem .15rem;
+      p{
+        width: 4.3rem;
+        white-space: nowrap;
+        overflow: hidden;
+        span{
+          display: inline-block;
+          width: 1.2rem;
+          margin: 0 .15rem 0 0;
+        }
+      }
+      i{
+        position: absolute;
+        display: block;
+        background: #fff;
+        width: .4rem;
+        padding: .1rem 0;
+        left: 4.1rem;
+        top: 0;
+      }
+    }
+    .prefer-trait{
+      background: @col-white;
+      text-align: center;
+      h2{
+        padding: .48rem 0 0 0;
+        font-size: .34rem;
+        color: #1B223F;
+        margin: 0;
+      }
+      .tips{
+        font-size: .26rem;
+        color: @col-gray;
+      }
+      .trait-type{
+        width: 6.36rem;
+        margin: 0 auto;
+        span{
+          display: inline-block;
+          .wh(1.7rem, .72rem);
+          background: #F2F4F7;
+          font-size: .3rem;
+          color: @col-gray;
+          line-height: .72rem;
+          border-radius: .36rem;
+          margin: .4rem .16rem 0;
+          &.selected{
+            background: rgba(154,87,200,0.3);
+            color: @col-light-purple;
+          }
+        }
+      }
+      button{
+        .wh(100%, .9rem);
+        background: @col-light-purple;
+        font-size: .36rem;
+        color: @col-white;
+        line-height: .9rem;
+        margin: .89rem 0 0;
+      }
+    }
+  }
+}
+//弹框字体大小
+.weui-toast__content{
+  font-size: .27rem;
+  padding:.2rem 0;
+}
+//下拉框style
+.vux-popup-picker-container{
+  font-size: .3rem;
+  .vux-popup-header{
+    .l-h(.88rem);
+    font-size: .3rem;
+  }
+  .scroller-content{
+    transform: translate3d(0px, 60px, 0px);
+  }
+  .scroller-item{
+    font-size: .28rem;
+  }
+}

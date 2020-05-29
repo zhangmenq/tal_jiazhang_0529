@@ -1,0 +1,508 @@
+.report_con{
+  height: 100%;
+  position: relative;
+  background:linear-gradient(150deg,rgba(68,22,138,1) 0, rgba(68,22,138,1) 10%,rgba(225,86,104,1) 100%);
+  .bg_top,.bg_foot{
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+  }
+  .bg_top{
+    top: 0;
+  }
+  .bg_foot{
+    bottom: 0;
+    z-index: 1;
+  }
+  .start_page{
+    height: 100%;
+    .avatar_box{
+      width: 3.71rem;
+      height: 3.37rem;
+      position: absolute;
+      top: .7rem;
+      left: 2.14rem;
+      background: url(/static/imgs/report/avatar_bg.png) no-repeat 0 0;
+      background-size: 100% 100%;
+      animation:avatarUpdown .8s infinite alternate;
+		  -webkit-animation:avatarUpdown .8s infinite alternate;
+      img{
+        display: block;
+        width: 1.7rem;
+        height: 1.7rem;
+        border-radius: 100%;
+        position: absolute;
+        left: .8rem;
+        top: .46rem;
+      }
+    }
+    .start_text{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 5.3rem;
+      padding: 0 .3rem;
+      color: #fff;
+      font-size: .3rem;
+      line-height: .48rem;
+      text-align: center;
+      p{
+        span{
+          font-size: .34rem;
+          color: #F4ECA2;
+          font-weight: bold;
+        }
+      }
+      p.two{
+        margin-top: .25rem;
+      }
+    }
+    .deer1{
+      display: block;
+      position: absolute;
+      left: .76rem;
+      top: 7.55rem;
+      width: 1.75rem;
+      height: 2.14rem;
+      z-index: 3;
+      animation:ghostUpdown 1s infinite alternate;
+		  -webkit-animation:ghostUpdown 1s infinite alternate;
+    }
+    .ufo{
+      display: block;
+      position: absolute;
+      right: 1.09rem;
+      top: 9rem;
+      z-index: 3;
+      width: 1.99rem;
+      height: 1.76rem;
+      // -webkit-animation: ufo .5s infinite;
+      // -webkit-animation-fill-mode: both;
+    }
+    .start_btn{
+      display: block;
+      width: 2.7rem;
+      height: 1.15rem;
+      position: absolute;
+      left: 50%;
+      bottom: .86rem;
+      z-index: 3;
+      background: url(/static/imgs/report/start_btn.png) no-repeat 0 0;
+      background-size: 100% 100%;
+      margin-left: -1.35rem;
+      -webkit-animation: pulsate-fwd .8s cubic-bezier(.47,0,.745,.715) infinite both;
+      animation: pulsate-fwd .8s cubic-bezier(.47,0,.745,.715) infinite both;
+      &:active{
+        opacity: .8;
+      }
+    }
+  }
+
+  .mid_page{
+    height: 100%;
+    .mid_item{
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      .mid_txt_box{
+        width: 5.5rem;
+        margin: 1rem auto 0;
+        position: relative;
+        z-index: 3;
+        .head_line{
+          height: .2rem;
+          background:linear-gradient(180deg,rgba(105,29,160,1),rgba(138,47,113,1));
+          border-radius:.05rem;
+        }
+        .txt_main{
+          width: 5.28rem;
+          margin: -.1rem auto 0;
+          background:rgba(244,243,245,.25);
+          border-top: 2px solid #3B1372;
+          border-radius: 0 0 .1rem .1rem;
+          .txt_box1{
+            padding: .45rem .3rem .45rem;
+            font-size: .3rem;
+            color: #fff;
+            line-height: .48rem;
+            &.txt_box2{
+              padding: .45rem .1rem .45rem .3rem;
+            }
+            &.txt_box3{
+              padding: .45rem .2rem .3rem;
+              line-height: .46rem;
+            }
+            span{
+              font-weight: bold;
+              color: #F4EB9F;
+            }
+            .message_box{
+              padding: .1rem .06rem .2rem;
+              border:.02rem dashed rgba(255,255,255,.3);
+              border-radius:.1rem;
+              color: #F4EB9F;
+            }
+          }
+        }
+      }
+      .imgs{
+        height: 5.07rem;
+        margin: 1.76rem 0 0;
+        position: relative;
+        z-index: 3;
+        background: url(/static/imgs/report/line.png) no-repeat center top;
+        background-size: auto 100%;
+        img{
+          display: block;
+          position: absolute;
+          &.deer2{
+            width: 2.78rem;
+            height: 3.13rem;
+            top: 1.01rem;
+            left: .99rem;
+            animation:deer2Updown 1s infinite alternate;
+            -webkit-animation:deer2Updown 1s infinite alternate;
+          }
+          &.star1{
+            width: 0.63rem;
+            height: 0.63rem;
+            top: .69rem;
+            left: 1.11rem;
+          }
+          &.star2{
+            width: 1.13rem;
+            height: 1.13rem;
+            top: 3.38rem;
+            right: .85rem;
+          }
+          &.teacher{
+            width: 2.66rem;
+            height: 1.57rem;
+            top: .25rem;
+            right: 1.06rem;
+            animation:teacherUpdown 1s infinite alternate;
+            -webkit-animation:teacherUpdown 1s infinite alternate;
+          }
+
+        }
+      }
+      .page2_img{
+        display: block;
+        position: absolute;
+        &.road{
+          width: 7.27rem;
+          height: 7.53rem;
+          bottom: -.6rem;
+          right: 0;
+        }
+        &.deer3{
+          width: 2.12rem;
+          height: 2.89rem;
+          bottom: 4.97rem;
+          right: 1.85rem;
+          animation:deer3Updown 1s infinite alternate;
+          -webkit-animation:deer3Updown 1s infinite alternate;
+        }
+        &.page2_star{
+          bottom: 4.07rem;
+          right: 3.67rem;
+          width: 1.1rem;
+          height: 1.1rem;
+        }
+        &.page2_star2{
+          bottom: 6.34rem;
+          right: -.43rem;
+        }
+      }
+      .page3_img_box{
+        margin-top: 0.35rem;
+        position: relative;
+        z-index: 3;
+        .page3_img{
+          display: block;
+          position: absolute;
+          &.step{
+            width: 6.55rem;
+            height: 5.85rem;
+            left: 0;
+            top: 0;
+            animation:stepUpdown 1s infinite alternate;
+            -webkit-animation:stepUpdown 1s infinite alternate;
+          }
+          &.jinbi{
+            width: 1.48rem;
+            height: 1.48rem;
+            left: 3.61rem;
+            top: 0.1rem;
+            animation: rotating 2s linear infinite
+          }
+          &.jinbi2{
+            width: .7rem;
+            height: .7rem;
+            left: 4.89rem;
+            top: 2.05rem;
+            animation: rotating 2s linear infinite
+          }
+          &.jinbi3{
+            width: .67rem;
+            height: .67rem;
+            left: 4.6rem;
+            top: 3.38rem;
+            animation: rotating 2s linear infinite
+          }
+        }
+      }
+      .get_report_btn{
+        display: block;
+        width: 4rem;
+        height: .88rem;
+        line-height: .88rem;
+        background: #8946F4 url(/static/imgs/report/gaoguang.png) no-repeat 3.38rem .09rem;
+        position: absolute;
+        left: 50%;
+        bottom: .5rem;
+        font-size: .3rem;
+        text-align: center;
+        color: #fff;
+        border-radius: .44rem;
+        transform: translate(-50%, 0);
+        z-index: 3;
+      }
+    }
+    
+  }
+  .certificate_page{
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    padding-top: .3rem;
+    .certificate_box{
+      margin: 0 auto;
+      width: 6.9rem;
+      background: #F4F3F5;
+      padding: .2rem;
+      position: relative;
+      z-index: 4;
+      .certificate_con{
+        border: .06rem solid #A57FB7;
+        padding: .08rem;
+        .certificate_center{
+          padding: .1rem .25rem;
+          border: .02rem dashed #A57FB7;
+          position: relative;
+          font-size: .28rem;
+          line-height: .44rem;
+          span{
+            font-size: .3rem;
+            color: #8946F4;
+          }
+          img{
+            display: block;
+            &.cer_deer{
+              width: 3.82rem;
+              height: auto;
+              margin: 0 auto;
+            }
+          }
+          .user_name{
+            line-height: .5rem;
+            margin: .3rem 0 0;
+            .user_avatar{
+              display: block;
+              width: .5rem;
+              height: .5rem;
+              border-radius: 100%;
+              float: left;
+              margin-right: .15rem;
+            }
+          }
+          .cer_txt{
+            margin-top: .2rem;
+            p{
+              font-weight: bold;
+            }
+          }
+          .cer_qrcode_box{
+            margin: .1rem .2rem 0 0;
+            img{
+              display: block;
+              width: 1.1rem;
+              height: 1.1rem;
+              margin: 0 auto;
+            }
+            .cer_qrcode_txt{
+              text-align: center;
+              font-size: .24rem;
+              color: #8946F4;
+            }
+          }
+          .cer_zhang_txt{
+            position: absolute;
+            right: .3rem;
+            bottom: 1.2rem;
+            font-size: .24rem;
+            line-height: .3rem;
+            font-weight: normal;
+            z-index: 3;
+            text-align: right;
+          }
+          .cer_zhang{
+            display: block;
+            position: absolute;
+            right: .5rem;
+            bottom: .7rem;
+          }
+        }
+      }
+    }
+    .cer_buy_box{
+      width: 6.5rem;
+      margin: .1rem auto .2rem;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 4;
+      .cer_buy_btn{
+        display: block;
+        width: 2.7rem;
+        height: auto;
+        margin: 0 auto;
+      }
+      .download_btn{
+        display: block;
+        padding-top: .56rem;
+        line-height: .3rem;
+        position: absolute;
+        left: 0;
+        top: .06rem;
+        color: #fff;
+        font-size: .24rem;
+        text-align: center;
+        background: url(/static/imgs/report/download.png) no-repeat center 0;
+        background-size: .36rem .41rem;
+      }
+    }
+  }
+  .showImg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    .showImg_mask{
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .showImg_con{
+      width: 6.5rem;
+      position: absolute;
+      left: 50%;
+      top: .7rem;
+      transform: translate(-50%, 0);
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .showImg_close{
+        display: block;
+        width: .4rem;
+        height: .4rem;
+        background: url(/static/imgs/report/close.png) no-repeat 0 0;
+        background-size: 100% 100%;
+        position: absolute;
+        right: 0;
+        top: -.5rem;
+      }
+      .showImg_tips{
+        margin-top: .3rem;
+        text-align: center;
+        color: #fff;
+        font-size: .24rem;
+        line-height: .32rem;
+        span{
+          display: inline-block;
+          padding-left: .4rem;
+          background: url(/static/imgs/report/pointer_ico.png) no-repeat 0 0;
+          background-size: .26rem .32rem;
+        }
+      }
+    }
+  }
+}
+.next_arr_box{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: .24rem;
+  color: #fff;
+  bottom: .5rem;
+  z-index: 3;
+  img{
+    display: block;
+    width: .44rem;
+    height: auto;
+    margin: 0 auto .1rem;
+    -webkit-animation: rightan 1s infinite;
+    -webkit-animation-fill-mode: both;
+  }
+}
+@-webkit-keyframes pulsate-fwd{
+  0%{-webkit-transform:scale(1);transform:scale(1)}
+  50%{-webkit-transform:scale(1.1);transform:scale(1.1)}
+  to{-webkit-transform:scale(1);transform:scale(1)}
+}
+@keyframes ghostUpdown{
+  from{top: 7.25rem;}
+  to{top: 7.55rem;}
+}
+@keyframes deer2Updown{
+  from{top: .81rem;}
+  to{top: 1.06rem;}
+}
+@keyframes deer3Updown{
+  from{bottom: 4.97rem;}
+  to{bottom: 5.17rem;}
+}
+@keyframes stepUpdown{
+  from{top: -.3rem;}
+  to{bottom: 0;}
+}
+@keyframes teacherUpdown{
+  from{top: 0;}
+  to{top: .25rem;}
+}
+@keyframes avatarUpdown{
+  from{top: .7rem;}
+  to{top: 1rem;}
+}
+@keyframes rotating {
+    from { -webkit-transform: rotate(0) }
+    to { -webkit-transform: rotate(360deg) }
+  }
+@-webkit-keyframes rightan{
+  from
+  {
+    margin: .1rem auto 0;
+    opacity: 0.1;
+  }
+  to
+  {
+    
+    margin: 0 auto .1rem;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ufo{
+  from{
+      opacity: 0.1;
+  }
+  to{
+      opacity: 1;
+  }
+}

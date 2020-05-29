@@ -1,0 +1,10 @@
+/build/
+/config/
+/dist/
+/*.js
+/mock
+/src/utils/address.js
+/src/utils/areas.js
+/src/utils/picker/picker.js
+/static/vconsole.js
+/static/aliyun-upload-sdk-1.4.0.min.js

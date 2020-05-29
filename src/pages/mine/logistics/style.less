@@ -1,0 +1,68 @@
+@import "../../../styles/basic.less";
+
+.item-box {
+  font-size: .3rem;
+  .item-box;
+
+  &:first-of-type {
+    margin-top: .2rem;
+  }
+
+  .item-title {
+    height: 1rem;
+    .ellipsis-m(2);
+  }
+
+  .signet {
+    text-align: right;
+
+    span {
+      display: inline-block;
+      .wh(1.1rem, 1.1rem);
+      .bg-m('@{img-path}/order-status-bg.png');
+      background-size: 1.1rem 3.3rem;
+      background-position: 0 0;
+    }
+  }
+
+  .item-func {
+    position: relative;
+    margin-top: 0.2rem;
+    padding-top: 0.2rem;
+    border-top: 0.02rem solid @col-border;
+
+    span {
+      position: absolute;
+      left: 0;
+      top: .35rem;
+      color: #6B758C;
+    }
+
+    .btn-fn {
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 0.1rem;
+
+      .weui-btn {
+        margin-left: .26rem;
+        margin-right: 0;
+        .weui-btn(1.88rem);
+      }
+    }
+  }
+}
+.item-cancel-box{
+  padding-right: .2rem;
+  padding-top: .1rem;
+  .item-cancel{
+    display: flex;
+    justify-content: flex-end;
+    .wh(100%,100%);
+    .cancel-img{
+      .wh(1.16rem,1.16rem);
+      flex: 1,.2rem;
+      .bg-m("@{img-path}logis-cancel.png");
+        background-size: 100% 100%;
+    }
+  }
+}

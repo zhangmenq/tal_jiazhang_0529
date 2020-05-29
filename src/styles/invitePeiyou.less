@@ -1,0 +1,588 @@
+ // #6B1980;
+@col-pri-purple: var(--colorPrincipal);
+@col-ori: #f8c410;
+.py-invite{
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+  .mx-he:before{
+    content: '';
+    .pos-box(1.28rem, 1.28rem);
+    .bg-m("@{img-path}/peiyou-invite-he-clock.png");
+    background-size: 1.28rem 1.28rem;
+  }
+  .report-he:before{
+    content: '';
+    .pos-box(1.3rem, 1.3rem);
+    .bg-m("@{img-path}/peiyou-invite-he-report.png");
+    background-size: 1.3rem 1.3rem;
+  }
+}
+.py-invite-icon{
+  &:before{
+    content: '';
+    .bg-m("@{img-path}/peiyou-invite-bg.png");
+    background-size: 2.1rem 5.9rem;
+  }
+  &.btn-purple:before{
+    position: absolute;
+    left: .1rem;
+    top: .1rem;
+    .wh(.2rem,.2rem);
+    background-position: -1.46rem -2.4rem;
+  }
+  &.sel:before{
+    .pos-box-hc(.24rem,.16rem);
+    right: .4rem;
+    background-position: -1.46rem -2.6rem;
+    z-index: 5;
+    transition: all .5s;
+  }
+  &.selected:before{
+    transform: rotate(180deg);
+  }
+  &.close:before{
+    .pos-box(.5rem,.5rem);
+    background-position: -1.46rem -2.76rem;
+  }
+  &.side:before, &.side:after{
+    position: absolute;
+    top: .37rem;
+    .wh(.41rem,.8rem);
+  }
+  &.side:before{
+    left: -.4rem;
+    background-position: -1.46rem -1.22rem;
+  }
+  &.side:after{
+    content: '';
+    right: -.4rem;
+    .bg-m("@{img-path}/peiyou-invite-bg.png");
+    background-size: 2.1rem 5.9rem;
+    background-position: -1.46rem -.41rem;
+  }
+  &.arrow:before{
+    display: block;
+    margin: .3rem auto 0;
+    .wh(.36rem,.23rem);
+    background-position: -1.49rem -2.1rem;
+  }
+  &.tit:before{
+    position: absolute;
+    top: .44rem;
+    left: 50%;
+    margin-left: -1.6rem;
+    .wh(2.1rem,.4rem);
+  }
+  &.mx:before{
+    .pos-box(1.46rem,1.6rem);
+    background-position: 0 -.4rem;
+  }
+  &.tv:before{
+    .pos-box(1.46rem,1.6rem);
+    background-position: 0 -3.6rem;
+  }
+  &.report:before{
+    .pos-box(1.46rem,1.6rem);
+    background-position: 0 -2rem;
+  }
+  &.mouse:before{
+    .pos-box-hc(1.14rem,.7rem);
+    right: -.3rem;
+    background-position: 0 -5.2rem;
+    animation: mouse .5s infinite alternate;
+  }
+}
+.invite-bot{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 1.86rem;
+  // padding-left: .45rem;
+  background: @col-pri-purple;
+  color: #fff;
+  .txt{
+    position: relative;
+    // width: 3rem;
+    line-height: .38rem;
+    font-size: .28rem;
+    font-weight: bold;
+    em{
+      position: relative;
+      top: .04rem;
+      color: @col-ori;
+      font-size: .47rem;
+    }
+  }
+  .btn-order{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.71rem;
+    height: .94rem;
+    // line-height: .94rem;
+    background: @col-ori;
+    text-align: center;
+    border-radius: .6rem;
+    color: @col-pri-purple;
+    .text-price {
+      display: block;
+      font-size: .55rem;
+    }
+    .text {
+      display: block;
+      font-size: .36rem;
+      &::after {
+        content: '';
+        display: 'block';
+        height: 3rem;
+      }
+    }
+  }
+  p{
+    margin-top: .1rem;
+    font-size: .2rem;
+  }
+}
+.py-invite{
+  padding: 6.55rem 0 2.4rem;
+  min-height: 100%;
+  background: #fff;
+  .bg-m('@{img-path}/peiyou-invite-banner.png');
+  background-size: 100% 6.55rem;
+  .course-tab{
+    display: flex;
+    justify-content: center;
+    margin-top: .92rem;
+    border-bottom: .04rem solid @col-pri-purple;
+    .grade{
+      .wh(3.4rem, 1.2rem);
+      border-radius:.3rem .3rem 0 0;
+      background-color: #eee;
+      color: #ccc;
+      font-size: .24rem;
+      text-align: center;
+      margin: 0 .045rem;
+      &.active{
+        background-color: @col-ori;
+        color: @col-pri-purple;
+      }
+      .coure-type{
+        font-size: .48rem;
+        font-weight: 600;
+      }
+    }
+  }
+  &.v1 {
+    .bg-m('@{img-path}/peiyou-invite-banner-v1.jpg');
+    background-size: 100% 5.79rem;
+  }
+  &.v2 {
+    padding-top: 6rem;
+    .bg-m('@{img-path}/peiyou-invite-banner-v2.jpg');
+    background-size: 100% 5.23rem;
+    .py-invite-icon{
+      &:before{
+        .bg-m("@{img-path}/activities-bg.png");
+        background-size: 2.1rem 5.9rem;
+      }
+      &.arrow:before{
+        display: block;
+        margin: .3rem auto 0;
+        .wh(.36rem,.23rem);
+        background-position: -1.49rem -2.1rem;
+      }
+      &.mx:before{
+        .pos-box(1.46rem,1.6rem);
+        background-position: 0 -.4rem;
+      }
+      &.tv:before{
+        .pos-box(1.46rem,1.6rem);
+        background-position: 0 -3.6rem;
+      }
+      &.report:before{
+        .pos-box(1.46rem,1.6rem);
+        background-position: 0 -2rem;
+      }
+    }
+    .mx-he:before{
+      .pos-box(1.28rem, 1.28rem);
+      .bg-m("@{img-path}/peiyou-invite-he-clock2.png");
+      background-size: 1.28rem 1.28rem;
+    }
+    .report-he:before{
+      .pos-box(1.3rem, 1.3rem);
+      .bg-m("@{img-path}/peiyou-invite-he-report2.png");
+      background-size: 1.3rem 1.3rem;
+    }
+
+  }
+  &.v3 {
+    padding-top: 6rem;
+    .bg-m('@{img-path}/peiyou-invite-banner-v3.jpg');
+    background-size: 100% 5.23rem;
+    background-color: #f7e5ff;
+    .py-invite-icon{
+      &:before{
+        .bg-m("@{img-path}/activities-bg.png");
+        background-size: 2.1rem 5.9rem;
+      }
+      &.arrow:before{
+        display: block;
+        margin: .3rem auto 0;
+        .wh(.36rem,.23rem);
+        background-position: -1.49rem -2.1rem;
+      }
+      &.mx:before{
+        .pos-box(1.46rem,1.6rem);
+        background-position: 0 -.4rem;
+      }
+      &.tv:before{
+        .pos-box(1.46rem,1.6rem);
+        background-position: 0 -3.6rem;
+      }
+      &.report:before{
+        .pos-box(1.46rem,1.6rem);
+        background-position: 0 -2rem;
+      }
+    }
+    .summary{
+      &:before, &:after{
+        background: #f7e5ff;
+      }
+    }
+    .mx-he:before{
+      .pos-box(1.28rem, 1.28rem);
+      .bg-m("@{img-path}/peiyou-invite-he-clock2.png");
+      background-size: 1.28rem 1.28rem;
+    }
+    .report-he:before{
+      .pos-box(1.3rem, 1.3rem);
+      .bg-m("@{img-path}/peiyou-invite-he-report2.png");
+      background-size: 1.3rem 1.3rem;
+    }
+  }
+  &.noscroll{
+    .wh(100%,100%);
+    overflow: hidden;
+  }
+  .summary{
+    position: relative;
+    margin: .1rem .8rem;
+    border: .16rem solid @col-ori;
+    line-height: .42rem;
+    text-align: center;
+    color: @col-pri-purple;
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      .wh(94%,.2rem);
+      background: #fff;
+    }
+    &:before{
+      top: -.18rem;
+      right: 0;
+    }
+    &:after{
+      bottom: -.18rem;
+      left: 0;
+    }
+  }
+  .title{
+    position: relative;
+    margin-top: .2rem;
+    .l-h(1.24rem);
+    background: @col-pri-purple;
+    text-align: center;
+    font-size: .47rem;
+    color: #fff;
+    font-weight: bold;
+  }
+  .tit-why{
+    position: relative;
+    margin: .6rem 0;
+    font-size: .47rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    &:before,&:after{
+      content: '';
+      position: absolute;
+      top: -.32rem;
+    }
+    &:before{
+      left: 0;
+      .wh(1.36rem,1.98rem);
+      .bg-m('@{img-path}/peiyou-invite-bg1.png');
+      background-size: 100% 100%;
+    }
+    &:after{
+      right: 8%;
+      .wh(1.01rem,1.72rem);
+      .bg-m('@{img-path}/peiyou-invite-bg2.png');
+      background-size: 100% 100%;
+    }
+    span{
+      display: block;
+      margin: 0 auto;
+      .wh(76.4%,.9rem);
+      line-height: .84rem;
+      background: @col-pri-purple;
+      border-radius: .9rem;
+    }
+  }
+  .tit-cooperation{
+    .tit-why;
+    margin-bottom: .4rem;
+    &:before{
+      top: -.3rem;
+      left: 9.4%;
+      .wh(1.38rem,.88rem);
+      .bg-m('@{img-path}/peiyou-invite-bg3.png');
+      background-size: 100% 100%;
+    }
+    &:after{
+      right: 0;
+      top: -1.7rem;
+      .wh(1.29rem,3.09rem);
+      .bg-m('@{img-path}/peiyou-invite-bg4.png');
+      background-size: 100% 100%;
+    }
+  }
+  .cooperation{
+    margin: 0 auto;
+    display: block;
+    width: 97%;
+    img{
+      width: 100%;
+      height: auto;
+    }
+    // .wh(7.13rem,3.13rem);
+    // .bg-m('@{img-path}/peiyou-invite-cooperation.png');
+    // background-size: 7.13rem 3.12rem;
+  }
+  .advisory{
+    color: @col-pri-purple;
+    text-align: center;
+  }
+  .item-box{
+    margin: 0 .3rem .3rem;
+    padding-bottom: .6rem;
+    background: #fff;
+    box-shadow: 0 0 .1rem rgba(0,0,0,.4);
+    .tit{
+      position: relative;
+      color: @col-pri-purple;
+      font-size: .39rem;
+      text-align: center;
+      p{
+        position: relative;
+        font-weight: bold;
+      }
+      em{
+        position: relative;
+        top: .06rem;
+        font-size: .65rem;
+      }
+    }
+    .tit-sub{
+      position: relative;
+      margin: .1rem .4rem 0;
+      font-size: .39rem;
+      text-align: center;
+      color: @col-pri-purple;
+      &:before{
+        content: '';
+        .pos-box-hc(100%,.02rem);
+        left: 0;
+        background: @col-pri-purple;
+      }
+      span{
+        position: relative;
+        padding: 0 .35rem;
+        display: inline-block;
+        vertical-align: middle;
+        background: #fff;
+        font-weight: bold;
+      }
+    }
+    .include-list{
+      margin: 0 .4rem;
+      li{
+        position: relative;
+        margin: .3rem 0;
+        padding: .2rem 0 0 1.5rem;
+        min-height: 1.8rem;
+        h5{
+          span{
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 .08rem;
+            .l-h(.38rem);
+            border-radius: .38rem;
+            background: @col-ori;
+            color: @col-pri-purple;
+            font-weight: bold;
+            font-size: .27rem;
+          }
+        }
+        p{
+          line-height: .42rem;
+          color: #606060;
+        }
+        .tips{
+          color: @col-pri-purple;
+        }
+      }
+    }
+    .welfare{
+      margin: .2rem .25rem 0;
+      padding: .3rem .15rem 0;
+      border-top: .01rem dashed @col-pri-purple;
+      font-size: .27rem;
+      color: @col-pri-purple;
+      .tit{
+        margin-bottom: .2rem;
+        &:before{
+          .pos-box-cc(2.1rem,.4rem);
+        }
+      }
+      p{
+        line-height: .41rem;
+      }
+    }
+    .why-list{
+      padding: 0 .25rem;
+      li{
+        position: relative;
+        padding: .4rem 0 .6rem;
+        border-top: .01rem dashed @col-pri-purple;
+        min-height: 4rem;
+        &:first-of-type{
+          // padding-left: .2rem;
+          border: none;
+        }
+        &:nth-child(even){
+          padding-left: 2.6rem;
+          .cover{
+            left: -.5rem;
+          }
+        }
+        &:nth-child(odd){
+          padding-right: 2.6rem;
+           .cover{
+            right: -.5rem;
+          }
+        }
+        &:last-of-type{
+          padding-left: 2.5rem;
+        }
+        &.last{
+          padding-left: 0;
+        }
+        .cover{
+          top: .4rem;
+          position: absolute;
+          .wh(3.13rem,3.13rem);
+          img{
+            .wh-img;
+          }
+        }
+      }
+      .content{
+        padding-top: .4rem;
+        padding-right: .2rem;
+      }
+      .tit{
+        margin-bottom: .2rem;
+        padding-left: .16rem;
+        font-size: .35rem;
+        color: @col-pri-purple;
+        text-align: left;
+        font-weight: bold;
+        width: 110%;
+      }
+      p{
+        position: relative;
+        line-height: .45rem;
+        color: #606060;
+        padding-left: .16rem;
+      }
+    }
+  }
+}
+.py-dialog{
+  .cus-dialog-box;
+  &.result{
+    &:before{
+      content: '';
+      .pos-box-lc(7.33rem,5.84rem);
+      top: 20%;
+      .bg-m('@{img-path}/peiyou-invite-light.png');
+      background-size: 7.33rem 5.84rem;
+    }
+    .dialog:before{
+      content: '';
+      .pos-box-lc(4.2rem,1.66rem);
+      top: -.7rem;
+      .bg-m('@{img-path}/peiyou-invite-ribbon.png');
+      background-size: 4.2rem 1.66rem;
+    }
+  }
+  .dialog{
+    position: relative;
+    .close{
+      .pos-box-lc(.5rem,.5rem);
+      bottom: -.9rem;
+    }
+    .dialog-body{
+      padding: .6rem .24rem;
+    }
+    .weui-btn{
+      .l-h(.8rem);
+      border-radius: .8rem;
+      background: #EAEAED;
+      font-size: .34rem;
+      color: #909090;
+      &:before,&:after{
+        display: none;
+      }
+      &.btn-purple:before{
+        display: block;
+      }
+      &.btn-purple{
+        background:linear-gradient(110deg,rgba(199,104,214,.9) 0%,rgba(149,55,172,.9) 20%);
+        box-shadow:0px 9px 10px 0px rgba(218,206,221,1);
+        color: #fff;
+      }
+    }
+  }
+  .other{
+    .weui-btn{
+      margin-top: .6rem;
+      width: 1.8rem;
+      .l-h(.7rem);
+      font-size: .26rem;
+      &.btn-purple{
+        background:linear-gradient(163deg,rgba(181,77,206,1) 0%,rgba(149,55,172,1) 100%);
+        box-shadow:0px 2px 4px 0px rgba(231,189,241,0.34);
+      }
+    }
+    .txt-center{
+      text-align: center;
+    }
+  }
+}
+@keyframes mouse{
+  50%{
+    right: -.2rem;
+  }
+}
